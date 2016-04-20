@@ -5,6 +5,7 @@ import UIKit
 
 func largestPrimeFactor(num: Int) -> Int? {
     
+    // reduce the values being tested to the square root
     let root = Int(sqrt(Double(num)))
     
     for n in Array(0..<root).reverse() {
