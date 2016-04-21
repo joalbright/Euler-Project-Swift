@@ -5,8 +5,7 @@ import UIKit
 
 func smallestProductOf(numbers: Int) -> Int? {
     
-    let primes = Array(2...numbers).filter { for i in 2..<$0 { if $0 % i == 0 { return false } }; return true }
-    let primesMultiplied = primes.reduce(1, combine: *)
+    let primesMultiplied = numbers.primes().reduce(1, combine: *)
     
     var num = primesMultiplied
     
