@@ -1,5 +1,7 @@
 # Euler Project Problems
 
+*Some solutions use extensions* [Extension.swift](/Euler.playground/Sources/Extensions.swift)
+
 > Solved 10 out of 556 problems
 
 1. [x] [Multiples of 3 and 5](/Euler.playground/Pages/Problem 1.xcplaygroundpage/Contents.swift)
