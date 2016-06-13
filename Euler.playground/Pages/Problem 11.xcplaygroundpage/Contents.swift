@@ -3,21 +3,28 @@
 
 func findLargestProduct(grid: [[Int]], adjacent: Int) -> Int {
     
+    let directions = [(1,0), (0,1), (1,1), (-1,1)]
     var largestProduct = 0
     
-    // loop horizontal
-    
-    // loop vertical
-    
-    // loop diagonal
-    
-    
-//    for i in 0...series.count-adjacent {
-//        
-//        let product = series[i..<i+adjacent].reduce(1, combine: *)
-//        if largestProduct < product { largestProduct = product }
-//        
-//    }
+    for (r,row) in grid.enumerate() {
+        
+        for c in 0..<row.count {
+            
+            for (x,y) in directions {
+            
+                let lastX = x * (adjacent - 1) + c
+                let lastY = y * (adjacent - 1) + r
+                
+                guard row.count > lastX && lastX > -1 && grid.count > lastY && lastY > -1 else { continue }
+                    
+                let values = Array(0..<adjacent).map { grid[r + $0 * y][c + $0 * x] }
+                largestProduct <== values.reduce(1, combine: *)
+                
+            }
+            
+        }
+        
+    }
     
     return largestProduct
     
@@ -47,3 +54,5 @@ let grid = [
     [01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48]
 
 ]
+
+let largestProductFor4 = findLargestProduct(grid, adjacent: 4) // 70600674

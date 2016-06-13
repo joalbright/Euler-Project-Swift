@@ -8,6 +8,36 @@ public func sqrt(num: Int) -> Int {
 
 extension Int {
     
+    public func primeFactors() -> [Int] {
+        
+        var leftOver = self
+        var factors: [Int] = []
+        
+        while leftOver > 1 {
+            
+            var divisor = 2
+            
+            while leftOver % divisor != 0 {
+                
+                divisor += 1
+                
+            }
+            
+            factors.append(divisor)
+            leftOver = leftOver / divisor
+            
+        }
+        
+        return factors
+        
+    }
+    
+    public func divisors() -> [Int] {
+                
+        return Array(1...self).filter { self % $0 == 0 }
+        
+    }
+    
     public func primes() -> [Int] {
         
         var numbers = Array(2...self)
@@ -19,7 +49,7 @@ extension Int {
             numbers.removeFirst()
             
             if number.isPrime() {
-            
+                
                 primes.append(number)
                 numbers = numbers.filter { $0 % number != 0 }
                 
@@ -36,6 +66,13 @@ extension Int {
         guard abs(self) > 1 else { return false }
         for i in 2..<abs(self) { if abs(self) % i == 0 { return false } }
         return true
+        
+    }
+    
+    public func isTriangular() -> Bool {
+        
+        let n = sqrt(self * 2)
+        return n * (n + 1) / 2 == self
         
     }
     

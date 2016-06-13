@@ -14,7 +14,7 @@
 8. [x] [Largest Product in a Series](/Euler.playground/Pages/Problem 8.xcplaygroundpage/Contents.swift)
 9. [x] [Special Pythagorean Triplet](/Euler.playground/Pages/Problem 9.xcplaygroundpage/Contents.swift)
 10. [x] [Summation of Primes](/Euler.playground/Pages/Problem 10.xcplaygroundpage/Contents.swift)
-11. [ ] Largest Product in a Grid
+11. [x] [Largest Product in a Grid](/Euler.playground/Pages/Problem 11.xcplaygroundpage/Contents.swift)
 12. [ ] Highly Divisible Triangular Number
 13. [ ] Large Sum
 14. [ ] Longest Collatz Sequence

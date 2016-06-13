@@ -21,3 +21,4 @@ let sumOf1000 = sumOfMultiples(1000, divisables: 3,5) // 233168
 // One Liner (sadly it is too complex for the compiler)
 
 // Array(1..<1000).filter { ($0 % 3) == 0 || ($0 % 5) == 0 }.reduce(0) { $0 + $1 }
+
